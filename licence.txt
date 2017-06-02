@@ -1,0 +1,30 @@
+thub commands..
+
+pwd
+ls
+ls-a
+cd..
+open..
+clear
+mkdir foldername
+cd foldername
+git init
+git remote add origin url
+git pull
+git branch -a
+git status
+git commit -m "subject"
+get push
+vim filename
+git help stash
+git checkout
+git log
+cat ~/.config
+git reset file_name
+git reset
+git branch branch_name
+git checkout branch_name
+git branch --merged
+git branch -d branch_name
+git branch -a
+git push origin --delete branch_name
