@@ -1,5 +1,6 @@
---------------sasikumar ——————————
---------------Git Comments--------
+-------------sasikumar ——————————
+
+
 
 git log
 ls
@@ -69,9 +70,5 @@ ls-lart.git/
 npn init
 
 git remote set-url origin https://github.com/zalym/gittutorial.git
-
-
-
-
 
 
