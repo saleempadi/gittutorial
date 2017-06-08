@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<title>Journal</title>
+<script src="assets/JS/Storage.js"></script>
+<link rel="stylesheet" href="assets/CSS/StorageStyle.css">
+</head>
+<body onload="doShowAll()">
+	<h1>Enter Title and Author</h1>
+	<form name=Journal>
+
+		<div id="PlayArea">
+			<table>
+				<tr>
+					<td><b>Title:</b><input type=text name=title></td>
+					<td><b>Author:</b><input type=text name=author></td>
+				</tr>
+
+				<tr>
+					<td>
+					    <input type=button value="Save"   onclick="Insert()"> 
+					  </td>
+				</tr>
+			</table>
+		</div>
+	</form>
+
+</body>
+</html>
