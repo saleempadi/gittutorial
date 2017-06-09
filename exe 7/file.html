@@ -24,16 +24,16 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $(".add-row").click(function(){
-            var id = $("#title").val();
-            var title = $("#content").val();
-            var author= $ ("#author").val();
-            if(  (title == ' ' || content == ' ' || author == '') ){
+            this.title = $("#title").val();
+            this.content = $("#content").val();
+            this.author= $ ("#author").val();
+            if(  (this.title == ' ' || this.content == ' ' || this.author == '') ){
                $("#addrow").empty();
                alert("YOU MUST ENTER ALL THE DETAILS");
            }
             else
             {
-            var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + id + "</td><td>" + title + "</td><td>"+ author +"</td></tr>";
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + this.title + "</td><td>" + this.content + "</td><td>"+ this.author +"</td></tr>";
             $("table tbody").append(markup);
             }
         });
