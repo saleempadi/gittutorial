@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    .fishes {
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+    }
+    input.MyButton {
+      width: 300px;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 150%;
+      background: #3366cc;
+      color: #fff;
+      border: 2px solid #3366cc;
+      border-radius: 10px;
+      box-shadow: 6px 6px 5px #999;
+    }
+    input.MyButton:hover {
+      color: #ffff00;
+      background: #000;
+      border: 1px solid #fff;
+      box-shadow: 5px 5px 4px #adadad;
+    }
+    h2 {
+      position: absolute;
+      top: 100px;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <img src="book.jpg" style="width:1900px;height:850px;" class="fishes" />
+    <img src="logo.png" class="logo" />
+    <center>
+      <h2>WELCOME..!<br>Publish your journal here<br><br><br><br>
+        <font color="powderblue">
+          An academic or scholarly journal is a periodical publication in which scholarship relating to a particular academic discipline
+          is published. Academic journals serve as permanent and transparent forums for the presentation, scrutiny and discussion
+          of research. They are usually peer-reviewed or refereed.</font>
+      </h2>
+    </center>
+<script>
+document.getElementById("demo").innerHTML = Date();
+</script>
+    <center>
+      <form>
+        <input class="MyButton" type="button" value=" Clik to Add journal-->" onclick="window.location.href='jquery.html'" />
+      </form>
+    </center>
+</head>
+</body>
+</html>

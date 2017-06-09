@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tamilselvan-Journals</title>
+    <img src="writing.jpg" style="width:1900px;height:500px;" class="fishes" />
+    <center>
+        <h2>
+            Journalism is the production and distribution of reports<br> on the interaction of events, facts, ideas, and
+            people that are the "news of the day" <br>and that impacts society to at least some degree. <br> The word applies
+            to the occupation (professional or not), <br>the methods of gathering information, and the organizing literary
+            styles. </center><br>
+    <br>
+    <p id="demo"></p>
+    </h2>
+    <style type="text/css">
+        h2 {
+            position: absolute;
+            top: 150px;
+            width: 100%;
+        }
+        form {
+            margin: 30px 0;
+        }
+        form input,
+        button {
+            padding: 5px;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        table,
+        th,
+        td {
+            border: 3px solid #cdcdcd;
+            padding: 10px;
+            text-align: left;
+        }
+        fishes {
+            position: relative;
+        }
+        input.MyButton {
+            width: 190px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 20;
+        }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById("demo").innerHTML = Date();
+        $(document).ready(function () {
+            $(".add-row").click(function () {
+               this.Name = $("#Name").val();
+               this.Title = $("#Title").val();
+            this.Author = $("#Author").val();
+                if (this.Name == ' ' || this.Title == ' ' || this.Author == '') {
+                    $("#addrow").empty();
+                    alert("Enter All Details");
+                }
+                else
+                    var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + this.Name + "</td><td>" + this.Title + "</td><td>" + this.Author + "</td><td>" + document.getElementById("fileupload").value + "</td></tr>";
+                $("table tbody").append(markup);
+                clear();
+            });
+            $(".delete-row").click(function () {
+                $("table tbody").find('input[name="record"]').each(function () {
+                    if ($(this).is(":checked")) {
+                        $(this).parents("tr").remove();
+                    }
+                });
+            });
+        });
+        function clear() {
+            document.getElementById("Name").value = "Name";
+            document.getElementById("Title").value = "Title";
+            document.getElementById("Author").value = "Author";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="Name" placeholder="Name">
+        <input type="text" id="Title" placeholder="Title">
+        <input type="text" id="Author" placeholder="Author">
+        <input class="MyButton" type="file" id="fileupload" accept="image/*" />
+        <input type="button" class="add-row" value="Submit">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Selection</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>File path</th>
+            </tr>
+            <tbody>
+            </tbody>
+        </thead>
+    </table>
+    <button type="button" class="delete-row">Delete Journal</button>
+</body>
+</html>
