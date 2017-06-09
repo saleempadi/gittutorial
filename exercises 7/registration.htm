@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>registration</title>
+</head>
+<body>
+ <img src="maple.jpg" style="width:1925px;height:500px;" class="exe" />
+    <form>
+        <input type="text" id="TITLE" placeholder="TITLE">
+        <input type="text" id="CONTENT" placeholder="CONTENT">
+        <input type="text" id="AUTHOR" placeholder="AUTHOR">
+        <input type="button" class="add-row" value="SUBMIT">
+    </form>
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="fileupload"> </form>
+ <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>TITLE</th>
+                <th>CONTENT</th>
+                  <th>AUTHOR</th>
+                    <th>PATH</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" class="delete-row">Delete Journal</button>
+</body> 
+</html>
+<style type="text/css">
+    form{
+        margin: 20px ;
+    }
+    form input, button{
+        padding: 5px;
+    }
+    table{
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+    table, th, td{
+        border: 1px solid #cdcdcd ;
+    }
+    table th, table td{
+        padding: 10px;
+        text-align: left;
+    }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            this.TITLE = $("#TITLE").val();
+           this.CONTENT = $("#CONTENT").val();
+           this.AUTHOR= $ ("#AUTHOR").val();
+            if(  (this.TITLE == ' ' || this.CONTENT == ' ' || this.AUTHOR == '') ){
+               $("#addrow").empty();
+               alert("please enter all details:");
+           }
+            else
+            {
+            markup = "<tr><td><input type='checkbox' name='record'></td><td>" + this.TITLE+ "</td><td>" + this.CONTENT + "</td><td>"+ this.AUTHOR + "</td><td>" + document.getElementById("fileupload").value +"</td></tr>";
+            $("table tbody").append(markup);
+            }
+            clear();
+        });
+     $(".delete-row").click(function(){
+            $("table tbody").find('input[name="record"]').each(function(){
+                if($(this).is(":checked")){
+                    $(this).parents("tr").remove();
+                }
+            });
+        });
+    });   
+function clear(){
+            document.getElementById("TITLE").value="";
+              document.getElementById("CONTENT").value="";
+                document.getElementById("AUTHOR").value="";
+        }
+</script>
+
