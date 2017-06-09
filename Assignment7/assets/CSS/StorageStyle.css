@@ -11,6 +11,7 @@ label {
 #PlayArea {
 	border: 1px dotted blue;
 	padding: 6px;
+	width: 800px;
 	background-color: #ccc;
 	margin-right: 50%;
 }
