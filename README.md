@@ -20,9 +20,9 @@ Using to run file as Visual Studio Code
 
 ## Authors
 
-* **S.Sasi Kumar** - *Initial work* - [S.Sasikumar](https://github.com/zalym/gittutorial)
+* **S.Sasi Kumar** - *Initial work* - [S.Sasikumar](https://github.com/zalym/gittutorial/tree/sasikumar)
 
-See also the list of [contributors](https://github.com/zalym/gittutorial) who participated in this project.
+See also the list of [contributors](https://github.com/zalym/gittutorial/tree/sasikumar) who participated in this project.
 
 ## License
 

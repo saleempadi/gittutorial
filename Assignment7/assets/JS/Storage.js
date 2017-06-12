@@ -1,7 +1,7 @@
 function SaveItem(idcde,pagetitle,pageauthor,contnt) {
 	// this.title= document.forms.Journal.title.value;
 	//this.author = document.forms.Journal.author.value;
-	this.idcde=idcde
+this.idcde=idcde
 this.title=pagetitle
 this.author=pageauthor
 this.contnt=contnt
@@ -44,13 +44,17 @@ var Insertitem=new SaveItem(document.forms.Journal.idcde.value,document.forms.Jo
 
 
 function RemoveItem() {
-
+if (document.forms.Journal.rmv.value == "" ) {
+		alert("Please Enter  IDcode to remove your journal....!")
+	}
+	else {
 var json = JSON.parse(localStorage["journal1"]);
 for (i=0;i<json.length;i++)
             if (json[i][0].idcde1 == document.forms.Journal.rmv.value) json.splice(i,1);
 localStorage["journal1"] = JSON.stringify(json);
 alert("Removed Successfully....!")
 doShowAll();
+	}
 
 }
 
@@ -74,6 +78,7 @@ function Edit()
 
 function ClearAll() {
 	localStorage.clear();
+	
 	doShowAll();
 }
 
