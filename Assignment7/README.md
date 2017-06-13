@@ -1,6 +1,6 @@
 # Assignments 7 - Journal Entry
 
-Assignments as Journal Entry and View the journal entries in html page with using the CSS,JS.....
+Assignments as Journal Entry and View the journal entries in html page with using the CSS,JS. Here i am using to store the data in a localstorage....
 
 ## Getting Started
 Download Chrome and Assignment7...
@@ -18,4 +18,4 @@ Download Chrome and Assignment7...
 
 * **S.Sasi Kumar** - *Initial work* - [S.Sasikumar](https://github.com/zalym/gittutorial/tree/sasikumar/Assignment7)
 
-See also the list of [contributors](https://github.com/zalym/gittutorial/tree/sasikumar/Assignment7) who participated in this project.
+See also the list of [contributors](https://github.com/zalym/gittutorial/branches) who participated in this project.

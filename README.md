@@ -22,7 +22,7 @@ Using to run file as Visual Studio Code
 
 * **S.Sasi Kumar** - *Initial work* - [S.Sasikumar](https://github.com/zalym/gittutorial/tree/sasikumar)
 
-See also the list of [contributors](https://github.com/zalym/gittutorial/tree/sasikumar) who participated in this project.
+See also the list of [contributors](https://github.com/zalym/gittutorial/branches) who participated in this project.
 
 ## License
 
@@ -33,4 +33,3 @@ This project is licensed under the Maplebots License - see the [LICENSE.md](LICE
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
-
