@@ -1,0 +1,117 @@
+<html>
+<head>
+    
+</head>
+<body>
+    
+    <textarea id="myTextarea" name="something" ROWS="5" COLS="7" disabled>Man</textarea>
+<h1><center>Hangman</center></h1>
+<p id="click"></p>
+<form name="hform">
+    <img src="hangman.jpg" style="width:1950px;height:350px;">
+<input name="ratezeichen" type="text" size="5" maxlength="1">
+<input name="ratebutton" type="button" value="Guess" onClick="pruefeZeichen()">
+<p id="gerateneBuchstaben">Wrong Letters:</p>
+
+
+<input name="refresh" type="button" value="New Game" onClick="location.reload()">
+</form>
+</body>
+</html>
+<Style>
+    body {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    background-color:yellowgreen;
+}
+input {
+    border: 25px solid whitesmoke;
+    font-family: Helvetica, sans-serif;
+    color:black;
+}
+#click {
+    font-family: 'Permanent Marker', 'cursive';
+    font-size: 5.0em;
+    color:yellow;
+}
+h1 {
+    font-family: 'Permanent Marker', 'cursive';
+    color:red;
+    font-size: 50px;
+}
+</style>
+
+<script>
+    var words = [
+ ["C","U","T","S"],["M","E","T","H","O","D","S"],["M","A","P","L","E"],["B","U","S"] 
+]
+var random = Math.floor((Math.random()*(words.length-1))); 
+var lsgwort = words[random];
+var total = new Array(lsgwort.length);
+var count = 1;
+var man = "";
+    var head = " ( ) \n";
+    var arms = " \\|/\n";
+    var belly = "  |\n";
+    var legs = " / \\";
+
+
+    for (var i = 0; i < total.length; i++){
+    total[i] = "_ ";
+}
+function print(){
+    for (var i = 0; i < total.length; i++){
+    var click = document.getElementById("click");
+    var buchstabe = document.createTextNode(total[i]);
+    click.appendChild(buchstabe);
+    }
+}
+var pruefeZeichen = function(){
+    var f = document.hform; 
+    var b = f.elements["ratezeichen"]; 
+    var zeichen = b.value;
+    zeichen = zeichen.toUpperCase();
+    for (var i = 0; i < lsgwort.length; i++){
+        if(lsgwort[i] === zeichen){
+            total[i] = zeichen + " ";
+            var treffer = true;
+        }
+    b.value = "";
+    }
+    var click = document.getElementById("click");
+    click.innerHTML=""; 
+    print();
+    if(!treffer){
+        var gerateneBuchstaben = document.getElementById("gerateneBuchstaben");
+        var buchstabe = document.createTextNode(" " + zeichen);
+        gerateneBuchstaben.appendChild(buchstabe); 
+    
+
+   if (count==1)
+   document.getElementById("myTextarea").value=head;
+   else if (count==2)
+   document.getElementById("myTextarea").value=head+arms;
+   else if (count==3)
+   document.getElementById("myTextarea").value=head+arms+belly;
+   else if (count==4)
+  document.getElementById("myTextarea").value=head+arms+belly+legs;
+       count++;
+   if(count === 5){
+        window.alert("Uh...I guess you're dead now.try again");
+    }
+}
+var value = true;
+    for (var i = 0; i < total.length; i++){
+        if(total[i] === "_ "){
+            value = false;
+        }
+    }
+    if(value){
+        window.alert("You win!");
+    }
+    }
+function init(){
+    print();
+}
+window.onload = init;
+</script>
