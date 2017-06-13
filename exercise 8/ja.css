@@ -1,0 +1,21 @@
+body {
+	background: url('http://www.writteninpencil.de/Projekte/Hangman/hangman-bg.png') fixed;
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+    background-color: bisque;
+}
+input {
+	border: 25px solid gainsboro;
+	font-family: Helvetica, sans-serif;
+	color: red;
+}
+#click {
+	font-family: 'Permanent Marker', 'cursive';
+	font-size: 5.0em;
+    color:yellow;
+}
+h1 {
+	font-family: 'Permanent Marker', 'cursive';
+    color:rebeccapurple;
+    font-size: 150px;
+}
