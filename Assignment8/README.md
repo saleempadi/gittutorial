@@ -9,7 +9,7 @@ Download the Assignment8 - index.html file....
 ## Running the file
 * Open the index.html in Chrome Broswer.
 * Here the CSS snd JS Script are inside the html page.
-* Enter the Character in the guess text field and enter.
+* Enter the Character in the guess text field then enter.
 
 
 ## Authors
