@@ -1,5 +1,5 @@
 $(document).ready(function() {              
-    $('i.glyphicon-thumbs-up').click(function(){    
+    $('i.glyphicon-thumbs-up,i.glyphicon-thumbs-down').click(function(){    
         var $this = $(this),
         c = $this.data('count');    
         if (!c) c = 0;
