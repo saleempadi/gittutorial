@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -12,81 +11,324 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/npm.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 
 <body>
-
     <p>
-        <center> 
+        <center>
             BOOTSTRAP
-           </center>
-            <br>
+        </center>
+        <br>
+        <div class="container">
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="band.jpg" alt="Bands">
+                    <div id="demo">
+                        <script>
+                            var likes1 = 0;
+                            var dislikes1 = 0;
+                            function like1() {
+                                likes1 += 1;
+                                document.getElementById("like1").innerHTML = likes1;
+                            }
+                            function dislike1() {
+                                dislikes1 += 1;
+                                document.getElementById("dislike1").innerHTML = dislikes1;
+                            }
+                        </script>
+                        <button class="like" onclick="like1()">Like
+<span class="likes1" id="like1">0</span>
+  </button>
+                        <button class="dislike1" onclick="dislike1()"> Dislikes 
+    <span class="dislikes1" id="dislike1"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="city.jpg" alt="City">
+                    <div id="demo">
+                        <script>
+                            var likes2 = 0;
+                            var dislikes2 = 0;
+                            function like2() {
+                                likes2 += 1;
+                                document.getElementById("like2").innerHTML = likes2;
+                            }
+                            function dislike2() {
+                                dislikes2 += 1;
+                                document.getElementById("dislike2").innerHTML = dislikes2;
+                            }
+                        </script>
+                        <button class="like2" onclick="like2()">Like
+<span class="likes2" id="like2">0</span>
+  </button>
+                        <button class="dislike" onclick="dislike2()"> Dislikes 
+    <span class="dislikes2" id="dislike2"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="couple.jpg" alt="couple">
+                    <div id="demo">
+                        <script>
+                            var likes3 = 0;
+                            var dislikes3 = 0;
+                            function like3() {
+                                likes3 += 1;
+                                document.getElementById("like3").innerHTML = likes3;
+                            }
+                            function dislike3() {
+                                dislikes3 += 1;
+                                document.getElementById("dislike3").innerHTML = dislikes3;
+                            }
+                        </script>
+                        <button class="like3" onclick="like3()">Like
+<span class="likes3" id="like3">0</span>
+  </button>
+                        <button class="dislike" onclick="dislike3()"> Dislikes 
+    <span class="dislikes3" id="dislike3"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="deer.jpg" alt="Deer">
+                    <div id="demo">
+                        <script>
+                            var likes4 = 0;
+                            var dislikes4 = 0;
+                            function like4() {
+                                likes4 += 1;
+                                document.getElementById("like4").innerHTML = likes4;
+                            }
 
-    <div class="container">
+                            function dislike4() {
+                                dislikes4 += 1;
+                                document.getElementById("dislike4").innerHTML = dislikes4;
+                            }
+                        </script>
+                        <button class="like4" onclick="like4()">Like
+<span class="likes4" id="like4">0</span>
+  </button>
+                        <button class="dislike" onclick="dislike4()"> Dislikes 
+    <span class="dislikes" id="dislike4"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="elephant.jpeg" alt="Elephant">
+                    <div id="demo">
+                        <script>
+                            var likes5 = 0;
+                            var dislikes5 = 0;
+                            function like5() {
+                                likes5 += 1;
+                                document.getElementById("like5").innerHTML = likes5;
+                            }
 
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="band.jpg" alt="Bands">
+                            function dislike5() {
+                                dislikes5 += 1;
+                                document.getElementById("dislike5").innerHTML = dislikes5;
+                            }
+                        </script>
+                        <button class="like5" onclick="like5()">Like
+<span class="likes5" id="like5">0</span>
+  </button>
+                        <button class="dislike5" onclick="dislike5()"> Dislikes 
+    <span class="dislikes5" id="dislike5"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="fox.jpeg" alt="Fox">
+                    <div id="demo">
+                        <script>
+                            var likes6 = 0;
+                            var dislikes6 = 0;
+                            function like6() {
+                                likes6 += 1;
+                                document.getElementById("like6").innerHTML = likes6;
+                            }
+                            function dislike6() {
+                                dislikes6 += 1;
+                                document.getElementById("dislike6").innerHTML = dislikes6;
+                            }
+                        </script>
+                        <button class="like6" onclick="like6()">Like
+<span class="likes6" id="like6">0</span>
+  </button>
+                        <button class="dislike" onclick="dislike6()"> Dislikes 
+    <span class="dislike6" id="dislike6"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="moon.jpg" alt="Moon">
+                    <div id="demo">
+                        <script>
+                            var likes7 = 0;
+                            var dislikes7 = 0;
+                            function like7() {
+                                likes7 += 1;
+                                document.getElementById("like7").innerHTML = likes7;
+                            }
+                            function dislike7() {
+                                dislikes7 += 1;
+                                document.getElementById("dislike7").innerHTML = dislikes7;
+                            }
+                        </script>
+                        <button class="like7" onclick="like7()">Like
+<span class="likes7" id="like7">0</span>
+  </button>
+                        <button class="dislike" onclick="dislike7()"> Dislikes 
+    <span class="dislikes7" id="dislike7"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="mountain-sky.jpeg" alt="Mountain">
+                    <div id="demo">
+                        <script>
+                            var likes8 = 0;
+                            var dislikes8 = 0;
+                            function like8() {
+                                likes8 += 1;
+                                document.getElementById("like8").innerHTML = likes8;
+                            }
+                            function dislike8() {
+                                dislikes8 += 1;
+                                document.getElementById("dislike8").innerHTML = dislikes8;
+                            }
+                        </script>
+                        <button class="like8" onclick="like8()">Like
+<span class="likes8" id="like8">0</span>
+  </button>
+                        <button class="dislike8" onclick="dislike8()"> Dislikes 
+    <span class="dislikes8" id="dislike8"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="national-park.jpeg" alt="National park">
+                    <div id="demo">
+                        <script>
+                            var likes9 = 0;
+                            var dislikes9 = 0;
+                            function like9() {
+                                likes9 += 1;
+                                document.getElementById("like9").innerHTML = likes9;
+                            }
+                            function dislike9() {
+                                dislikes9 += 1;
+                                document.getElementById("dislike9").innerHTML = dislikes9;
+                            }
+                        </script>
+                        <button class="like9" onclick="like9()">Like
+<span class="likes9" id="like9">0</span>
+  </button>
+                        <button class="dislike9" onclick="dislike9()"> Dislikes 
+    <span class="dislikes9" id="dislike9"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="ocean-cave.jpg" alt="ocean-cave">
+                    <div id="demo">
 
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="city.jpg" alt="City">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="couple.jpg" alt="couple">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="deer.jpg" alt="Deer">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="elephant.jpeg" alt="Elephant">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="fox.jpeg" alt="Fox">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="moon.jpg" alt="Moon">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="mountain-sky.jpeg" alt="Mountain">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="national-park.jpeg" alt="National park">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="ocean-cave.jpg" alt="ocean-cave">
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="pancakes.gif" alt="pancakes" style=>
-            </div>
-        </div>
-        <div class='col-sm-6 col-xs-8 col-md-3 col-lg-3'>
-            <div class="thumbnail">
-                <img src="sunset.jpg" alt="sunset">
-            </div>
-        </div>
+                        <script>
+                            var likes10 = 0;
+                            var dislikes10 = 0;
+                            function like10() {
+                                likes10 += 1;
+                                document.getElementById("like10").innerHTML = likes10;
+                            }
 
-    </div>
+                            function dislike10() {
+                                dislikes10 += 1;
+                                document.getElementById("dislike10").innerHTML = dislikes10;
+                            }
+                        </script>
+                        <button class="like10" onclick="like10()">Like
+<span class="likes10" id="like10">0</span>
+  </button>
+                        <button class="dislike10" onclick="dislike10()"> Dislikes 
+
+    <span class="dislikes10" id="dislike10"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="pancakes.gif" alt="pancakes">
+                    <div id="demo">
+                        <script>
+                            var likes11 = 0;
+                            var dislikes11 = 0;
+                            function like11() {
+                                likes11 += 1;
+                                document.getElementById("like11").innerHTML = likes11;
+                            }
+                            function dislike11() {
+                                dislikes11 += 1;
+                                document.getElementById("dislike11").innerHTML = dislikes11;
+                            }
+                        </script>
+                        <button class="like11" onclick="like11()">Like
+<span class="likes11" id="like11">0</span>
+  </button>
+                        <button class="dislike11" onclick="dislike11()"> Dislikes 
+    <span class="dislikes11" id="dislike11"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-6 col-xs-8 col-md-4 col-lg-3'>
+                <div class="thumbnail">
+                    <img src="sunset.jpg" alt="sunset">
+                    <div id="demo">
+                        <script>
+                            var likes12 = 0;
+                            var dislikes12 = 0;
+                            function like12() {
+                                likes12 += 1;
+                                document.getElementById("like12").innerHTML = likes12;
+                            }
+
+                            function dislike12() {
+                                dislikes12 += 1;
+                                document.getElementById("dislike12").innerHTML = dislikes12;
+                            }
+                        </script>
+                        <button class="like12" onclick="like12()">Like
+<span class="likes12" id="like12">0</span>
+
+  </button>
+                        <button class="dislike12" onclick="dislike12()"> Dislikes 
+    <span class="dislikes12" id="dislike12"> 0 </span>
+  </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
