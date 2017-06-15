@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <center>
         <h2>Photo Grid project</h2>
         <p>
@@ -23,207 +22,265 @@
         </p>
     </center>
     <div class="container">
-
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="band.jpg">
-
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                   
+                <script type="text/javascript">
+                    var band = 0;
+                    function onClick() {
+                        band += 1;
+                        document.getElementById("city").innerHTML = band;
+                    };
+                    var bands = 0;
+                    function onClick1() {
+                        bands += 1;
+                        document.getElementById("citys").innerHTML = bands;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                
-                </form>
+                <button type="button"  onClick="onClick()">Like</button>
+                <button class ="btn like btn-danger" type="button" onClick="onClick1()">Dislike</button>
+                <p>Likes: <a id="city">0</a></p>
+                <p>Dislikes: <a id="citys">0</a></p>
+
             </div>
         </div>
+
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="city.jpg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                   
+                <script type="text/javascript">
+                    var cities = 0;
+                    function cityb() {
+                        cities += 1;
+                        document.getElementById("citiess").innerHTML = cities;
+                    };
+                    var citiess = 0;
+                    function citybb() {
+                        citiess += 1;
+                        document.getElementById("citiesss").innerHTML = citiess;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                  
-                </form>
+                <button type="button" onClick="cityb()">Like</button>
+                <button class ="btn like btn-danger" type="button" onClick="citybb()">Dislike</button>
+                <p>Likes: <a id="citiess">0</a></p>
+                <p>Dislikes: <a id="citiesss">0</a></p>
             </div>
         </div>
+
+
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="couple.jpg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
+                <script type="text/javascript">
+                    var couplesv = 0;
+                    function couplesb() {
+                        couplesv += 1;
+                        document.getElementById("couples").innerHTML = couplesv;
+                    };
+                    var couplesvv = 0;
+                    function couplesb1() {
+                        couplesvv += 1;
+                        document.getElementById("coupless").innerHTML = couplesvv;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                   
-                </form>
+                <button type="button" onClick="couplesb()">Like</button>
+                <button class ="btn like btn-danger" type="button" onClick="couplesb1()">Dislike</button>
+                <p>Likes: <a id="couples">0</a></p>
+                <p>Dislikes: <a id="coupless">0</a></p>
             </div>
         </div>
+
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="deer.jpg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                  
+                <script type="text/javascript">
+                    var deerr = 0;
+                    function deess() {
+                        deerr += 1;
+                        document.getElementById("animal").innerHTML = deerr;
+                    };
+                    var deer = 0;
+                    function dees() {
+                        deer += 1;
+                        document.getElementById("animals").innerHTML = deer;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                   
-                </form>
+                <button type="button" onClick="deess()">Like</button>
+                <button class ="btn like btn-danger" type="button" onClick="dees()">Dislike</button>
+                <p>Likes: <a id="animal">0</a></p>
+                <p>Dislike: <a id="animals">0</a></p>
             </div>
         </div>
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="elephant.jpeg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
+                <script type="text/javascript">
+                    var elephants = 0;
+                    function forest() {
+                        elephants += 1;
+                        document.getElementById("tree").innerHTML = elephants;
+                    };
+                    var elephant = 0;
+                    function forests() {
+                        elephant += 1;
+                        document.getElementById("trees").innerHTML = elephant;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                   
-                </form>
+                <button type="button" onClick="forest()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="forests()">Dislike</button>
+                <p>Likes: <a id="tree">0</a></p>
+                <p>Dislikes: <a id="trees">0</a></p>
             </div>
         </div>
+
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="fox.jpeg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                    
+                <script type="text/javascript">
+                    var foxs = 0;
+                    function pic() {
+                        foxs += 1;
+                        document.getElementById("nice").innerHTML = foxs;
+                    };
+                    var fox = 0;
+                    function pict() {
+                        fox += 1;
+                        document.getElementById("nicee").innerHTML = fox;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                    
-                </form>
+                <button type="button" onClick="pic()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="pict()">Dislike</button>
+                <p>Likes: <a id="nice">0</a></p>
+                <p>Dislike: <a id="nicee">0</a></p>
             </div>
         </div>
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="moon.jpg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                   
+                <script type="text/javascript">
+                    var moons = 0;
+                    function sky() {
+                        moons += 1;
+                        document.getElementById("moon").innerHTML = moons;
+                    };
+                    var moon = 0;
+                    function skys() {
+                        moon += 1;
+                        document.getElementById("moons").innerHTML = moon;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                  
-                </form>
+                <button type="button" onClick="sky()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="skys()">Dislike</button>
+                <p>Likes: <a id="moon">0</a></p>
+                <p>Dislike: <a id="moons">0</a></p>
             </div>
         </div>
+
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="mountain-sky.jpeg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
+                <script type="text/javascript">
+                    var mountains = 0;
+                    function water() {
+                        mountains += 1;
+                        document.getElementById("ICE").innerHTML = mountains;
+                    };
+                    var mountain = 0;
+                    function waters() {
+                        mountain += 1;
+                        document.getElementById("ICES").innerHTML = mountain;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                   
-                </form>
+                <button type="button" onClick="water()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="waters()">Dislike</button>
+                <p>Likes: <a id="ICE">0</a></p>
+                <p>Dislike: <a id="ICES">0</a></p>
             </div>
         </div>
+
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="national-park.jpeg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                    
+                <script type="text/javascript">
+                    var nationals = 0;
+                    function park() {
+                        nationals += 1;
+                        document.getElementById("plant").innerHTML = nationals;
+                    };
+                    var national = 0;
+                    function parks() {
+                        national += 1;
+                        document.getElementById("plants").innerHTML = national;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                 
-                </form>
+                <button type="button" onClick="park()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="parks()">Dislike</button>
+                <p>Likes: <a id="plant">0</a></p>
+                <p>Dislike: <a id="plants">0</a></p>
             </div>
         </div>
+
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="ocean-cave.jpg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                    
+                <script type="text/javascript">
+                    var oceans = 0;
+                    function caves() {
+                        oceans += 1;
+                        document.getElementById("blue").innerHTML = oceans;
+                    };
+                    var ocean = 0;
+                    function cavess() {
+                        ocean += 1;
+                        document.getElementById("blues").innerHTML = ocean;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                   
-                </form>
+                <button type="button" onClick="caves()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="cavess()">Dislike</button>
+                <p>Likes: <a id="blue">0</a></p>
+                <p>Dislike: <a id="blues">0</a></p>
             </div>
         </div>
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="pancakes.gif">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                   
+                <script type="text/javascript">
+                    var pans = 0;
+                    function cake() {
+                        pans += 1;
+                        document.getElementById("bag").innerHTML = pans;
+                    };
+                    var pan = 0;
+                    function cakes() {
+                        pan += 1;
+                        document.getElementById("bags").innerHTML = pan;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                   
-                </form>
+                <button type="button" onClick="cake()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="cakes()">Dislike</button>
+                <p>Likes: <a id="bag">0</a></p>
+                <p>Dislikes: <a id="bags">0</a></p>
             </div>
         </div>
         <div class='col-sm-6 col-xs-7 col-md-4 col-lg-3'>
             <div class="thumbnail">
                 <img src="sunset.jpg">
-                <script language="javascript">
-                    function addone(field) {
-                        field.value = Number(field.value) + 1;
-                    }
-
-                  
+                <script type="text/javascript">
+                    var sun = 0;
+                    function set() {
+                        sun += 1;
+                        document.getElementById("cloud").innerHTML = sun;
+                    };
+                    var suns = 0;
+                    function sets() {
+                        suns += 1;
+                        document.getElementById("clouds").innerHTML = suns;
+                    };
                 </script>
-                <form name="myform">
-                    <input type="text" name="myfield" value="0" size="5" readonly="readonly"><br>
-                    <input type="button" value="Like! " onclick="addone(myfield);" onclick="this.disabled = true">
-                    
-                </form>
+                <button type="button" onClick="set()">Like</button>
+                <button class ="btn like btn-danger"  type="button" onClick="sets()">Dislike</button>
+                <p>likes: <a id="cloud">0</a></p>
+                <p>Dislike: <a id="clouds">0</a></p>
             </div>
         </div>
     </div>
