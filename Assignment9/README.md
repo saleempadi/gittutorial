@@ -1,15 +1,15 @@
-# Assignments 8 - Journal Entry
+# Assignments 9 - Responsive Photo Gallery using Bootstrap
 
-Assignments as Hangmam Game.....
+Assignments as Responsive Photo Gallery using Bootstrap.....
 
 ## Getting Started
-Download the Assignment8 folder....
+Download the Assignment9 folder....
 
 
 ## Running the file
 * Open the index.html in Chrome Broswer.
-* Here the CSS snd JS Script are inside the html page.
-* Enter the Character in the guess text field then enter.
+* Here the CSS snd JS Script are internal and External the html page.
+* In This Website are auto resizing with help bootstrap concept.
 
 
 ## Authors
