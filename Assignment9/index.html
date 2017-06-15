@@ -23,81 +23,10 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
-	   
-    <script language="javascript" type="text/javascript" src="js/jquery.js"></script>    
-    <script language="javascript" type="text/javascript" src="js/popup2.3.js"></script> 
+	<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link href='dist/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+	<link href='demo.css' rel='stylesheet' type='text/css'>
 
-<script language="javascript" type="text/javascript">
-    		$(document).ready(function(){
-    			$(".popup").popup({
-					transparentLayer : true,
-					gallery : true,
-					galleryTitle : "Gallery1 Title",
-					imgaeDesc : true,
-					galleryCounter : true,
-					imageDesc : true,
-					autoSize : false,
-					boxHeight : 600,
-					boxWidth : 500,
-					shadowLength : 0,
-					transition : 0,
-					galleryCircular: false,
-					onOpen : function() {
-						console.log("opened the box .popup");
-					},
-					onClose : function() {
-						console.log("closed the box .popup");
-					}
-				});
-				$(".popup1").popup({
-					transparentLayer : true,
-					gallery : true,
-					galleryTitle : "Gallery2 Title",
-					popupID : "fixedGallery",
-					imageDesc : true,
-					fixedTop : 50,
-					fixedLeft : false,
-					galleryCircular: false,
-					onOpen : function() {
-						console.log("opened the box .popup1");
-					},
-					onClose : function() {
-						console.log("closed the box .popup1");
-					}
-				});
-				$(".popup2").popup({
-					transparentLayer : true,
-					gallery : false,
-					popupID : "popupBox2",
-					ajax : true,
-					overflow: "hidden",
-					shadowLength : 10,
-					hasCloseButton : false,
-					onOpen : function() {
-						console.log("opened the box .popup2");
-					},
-					onClose : function() {
-						console.log("closed the box .popup2");
-					}
-				});
-				$(".popup3").popup({
-					transparentLayer : true,
-					gallery : false,
-					popupID : "popupBox3",
-					contentClass : "popupBox3",
-					onOpen : function() {
-						console.log("opened the box .popup3");
-					},
-					onClose : function() {
-						console.log("closed the box .popup3");
-					}
-				});
-
-			});
-			
-
-    </script>
 </head>
 
 <body>
@@ -106,13 +35,16 @@
         <h2> A Beautiful Responsive grid for your favourite photos</h2>
     </center>
     <div class="container">
+        <div class="gallery">
+            
         <div class="row">
             <div class='list-group gallery'>
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
                      
-                        <img class="img-responsive" alt="" src="image/band.jpg" name="image/band.jpg" class="popup" title="Band"/>
+                         <a href="image/1.jpg" class="img-responsive" ><img class="big" src="image/1.jpg" alt="" title="Band" />
+               
                     <div class='text-right'>
                       <small class='text-muted' >Band</small>
 
@@ -134,7 +66,7 @@
                             
                         </div>
                     </div> <!-- text-right / end -->
-                     
+                     </a>
                         <button class="btn like btn-danger" onclick="add1()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes1">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub1()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes1">0</span></button>
                     </div>
@@ -145,8 +77,8 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                  
-                    <img class="img-responsive" alt="" src="image/city.jpg" name="image/city.jpg" class="popup" title="City"/>
+                  <a href="image/2.jpg" class="img-responsive" ><img class="big" src="image/2.jpg" alt="" title="City" />
+               
                     <div class='text-right'>
                         <small class='text-muted' >City</small>
                        <div id="demo">
@@ -174,8 +106,7 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                       
-                    <img class="img-responsive" alt="" src="image/couple.jpg" name="image/couple.jpg" class="popup" title="Couple" />
+                         <a href="image/3.jpg" class="img-responsive" ><img class="big" src="image/3.jpg" alt="" title="Couple" />
                     <div class='text-right'>
                         <small class='text-muted' >Couple</small>
                        <div id="demo">
@@ -194,7 +125,7 @@
                            
                         </div>
                     </div> <!-- text-right / end -->
-                     
+                     </a>
                         <button class="btn like btn-danger" onclick="add3()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes3">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub3()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes3">0</span></button>
                     </div>
@@ -203,8 +134,7 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                      
-                    <img class="img-responsive" alt="" src="image/deer.jpg" name="image/deer.jpg" class="popup" title="Deer"/>
+                        <a href="image/4.jpg" class="img-responsive" ><img class="big" src="image/4.jpg" alt="" title="Deer" />
                     <div class='text-right'>
                         <small class='text-muted' >Deer</small>
                        <div id="demo">
@@ -223,7 +153,7 @@
                            
                         </div>
                     </div> <!-- text-right / end -->
-                    
+                        </a>
                         <button class="btn like btn-danger" onclick="add4()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes4">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub4()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes4">0</span></button>
                     </div>
@@ -235,8 +165,7 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                     
-                    <img class="img-responsive" alt="" src="image/elephant.jpeg" name="image/elephant.jpeg" class="popup" title="Elephant"/>
+                       <a href="image/5.jpg" class="img-responsive" ><img class="big" src="image/5.jpg" alt="" title="Elephant" />
                     <div class='text-right'>
                         <small class='text-muted' >Elephant</small>
                        <div id="demo">
@@ -255,7 +184,7 @@
                             
                         </div>
                     </div> <!-- text-right / end -->
-                    
+                       </a>
                         <button class="btn like btn-danger" onclick="add5()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes5">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub5()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes5">0</span></button>
                     </div>
@@ -264,8 +193,8 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                      
-                    <img class="img-responsive" alt="" src="image/fox.jpeg" name="image/fox.jpeg" class="popup" title="Fox"/>
+                      <a href="image/6.jpg" class="img-responsive" ><img class="big" src="image/6.jpg" alt="" title="Fox" />
+
                     <div class='text-right'>
                         <small class='text-muted' >Fox</small>
                        <div id="demo">
@@ -284,7 +213,7 @@
                         
                         </div>
                     </div> <!-- text-right / end -->
-                  
+                      </a>
                         <button class="btn like btn-danger" onclick="add6()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes6">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub6()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes6">0</span></button>
                     </div>
@@ -294,8 +223,8 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                       
-                    <img class="img-responsive" alt="" src="image/moon.jpg" name="image/moon.jpg" class="popup" title="Moon"/>
+                       <a href="image/7.jpg" class="img-responsive" ><img class="big" src="image/7.jpg" alt="" title="Moon" />
+                   
                     <div class='text-right'>
                         <small class='text-muted' >Moon</small>
                        <div id="demo">
@@ -314,7 +243,7 @@
                            
                         </div>
                     </div> <!-- text-right / end -->
-                     
+                       </a>
                         <button class="btn like btn-danger" onclick="add7()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes7">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub7()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes7">0</span></button>
                     </div>
@@ -325,8 +254,8 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                       
-                    <img class="img-responsive" alt="" src="image/mountain-sky.jpeg" name="image/mountain-sky.jpeg" class="popup" title="Mountain-Sky"/>
+                       <a href="image/8.jpg" class="img-responsive" ><img class="big" src="image/8.jpg" alt="" title="Mountain-Sky" />
+                   
                     <div class='text-right'>
                         <small class='text-muted' >Mountain-Sky</small>
                        <div id="demo">
@@ -345,19 +274,17 @@
                            
                         </div>
                     </div> <!-- text-right / end -->
-                    
+                    </a>
                         <button class="btn like btn-danger" onclick="add8()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes8">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub8()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes8">0</span></button>
                     </div>
                 </div>
                 <!-- col-6 / end -->
 
-
-
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                      
-                    <img  alt="" src="image/national-park.jpeg" name="image/national-park.jpeg" class="popup" title="National-Park"/>
+                           <a href="image/9.jpg" class="img-responsive" ><img class="big" src="image/9.jpg" alt="" title="National-Park" />
+                
                     <div class='text-right'>
                         <small class='text-muted' >National-Park</small>
                        <div id="demo">
@@ -376,7 +303,7 @@
                           
                         </div>
                     </div> <!-- text-right / end -->
-                     
+                           </a>
                         <button class="btn like btn-danger" onclick="add9()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes9">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub9()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes9">0</span></button>
                     </div>
@@ -386,8 +313,8 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                        
-                    <img  alt="" src="image/ocean-cave.jpg"  name="image/ocean-cave.jpg" class="popup" title="Ocean-Cave"/>
+                         <a href="image/10.jpg" class="img-responsive" ><img class="big" src="image/10.jpg" alt="" title="Ocean-Cave" />
+                   
                     <div class='text-right'>
                         <small class='text-muted' >Ocean-Cave</small>
                        <div id="demo">
@@ -406,7 +333,7 @@
                            
                         </div>
                     </div> <!-- text-right / end -->
-                    
+                         </a>
                         <button class="btn like btn-danger" onclick="add10()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes10">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub10()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes10">0</span></button>
                     </div>
@@ -416,8 +343,8 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                        
-                    <img  alt="" src="image/pancakes.gif" name="image/pancakes.gif" class="popup" title="Pancakes" />
+                        <a href="image/11.jpg" class="img-responsive" ><img class="big" src="image/11.jpg" alt="" title="Pancakes" />
+              
                     <div class='text-right'>
                         <small class='text-muted' >Pancakes</small>
                        <div id="demo">
@@ -436,7 +363,7 @@
                             
                         </div>
                     </div> <!-- text-right / end -->
-                     
+                        </a>
                         <button class="btn like btn-danger" onclick="add11()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes11">0</span></button>
                         <button class="btn dislike btn-warning" onclick="sub11()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes11">0</span></button>
                     </div>
@@ -446,8 +373,8 @@
 
                 <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
                     <div class="thumbnail fancybox" align="right">
-                       
-                    <img  alt="" src="image/sunset.jpg" name="image/sunset.jpg" class="popup" title="Sunset" />
+                         <a href="image/12.jpg" class="img-responsive" ><img class="big" src="image/12.jpg" alt="" title="Sunset" />
+                 
                     <div class='text-right'>
                         <small class='text-muted' >Sunset</small>
                        <div id="demo">
@@ -479,7 +406,58 @@
 
             </div>
         </div>
+        </div>
     </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="dist/simple-lightbox.js"></script>
+    <script>
+	$(function(){
+		var $gallery = $('.gallery a').simpleLightbox();
+
+		$gallery.on('show.simplelightbox', function(){
+			console.log('Requested for showing');
+		})
+		.on('shown.simplelightbox', function(){
+			console.log('Shown');
+		})
+		.on('close.simplelightbox', function(){
+			console.log('Requested for closing');
+		})
+		.on('closed.simplelightbox', function(){
+			console.log('Closed');
+		})
+		.on('change.simplelightbox', function(){
+			console.log('Requested for change');
+		})
+		.on('next.simplelightbox', function(){
+			console.log('Requested for next');
+		})
+		.on('prev.simplelightbox', function(){
+			console.log('Requested for prev');
+		})
+		.on('nextImageLoaded.simplelightbox', function(){
+			console.log('Next image loaded');
+		})
+		.on('prevImageLoaded.simplelightbox', function(){
+			console.log('Prev image loaded');
+		})
+		.on('changed.simplelightbox', function(){
+			console.log('Image changed');
+		})
+		.on('nextDone.simplelightbox', function(){
+			console.log('Image changed to next');
+		})
+		.on('prevDone.simplelightbox', function(){
+			console.log('Image changed to prev');
+		})
+		.on('error.simplelightbox', function(e){
+			console.log('No image found, go to the next/prev');
+			console.log(e);
+		});
+	});
+</script>
 </body>
 
 </html>
