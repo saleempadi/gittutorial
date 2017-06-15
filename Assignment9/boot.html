@@ -3,173 +3,483 @@
 
 <head>
     <title>Bootstrap Example</title>
-     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-     <!--
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-<link rel="stylesheet" href="css/bootstrap-theme.css">
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/npm.js"></script>
+   <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/like-dislike.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+	   
+    <script language="javascript" type="text/javascript" src="js/jquery.js"></script>    
+    <script language="javascript" type="text/javascript" src="js/popup2.3.js"></script> 
+
+<script language="javascript" type="text/javascript">
+    		$(document).ready(function(){
+    			$(".popup").popup({
+					transparentLayer : true,
+					gallery : true,
+					galleryTitle : "Gallery1 Title",
+					imgaeDesc : true,
+					galleryCounter : true,
+					imageDesc : true,
+					autoSize : false,
+					boxHeight : 600,
+					boxWidth : 500,
+					shadowLength : 0,
+					transition : 0,
+					galleryCircular: false,
+					onOpen : function() {
+						console.log("opened the box .popup");
+					},
+					onClose : function() {
+						console.log("closed the box .popup");
+					}
+				});
+				$(".popup1").popup({
+					transparentLayer : true,
+					gallery : true,
+					galleryTitle : "Gallery2 Title",
+					popupID : "fixedGallery",
+					imageDesc : true,
+					fixedTop : 50,
+					fixedLeft : false,
+					galleryCircular: false,
+					onOpen : function() {
+						console.log("opened the box .popup1");
+					},
+					onClose : function() {
+						console.log("closed the box .popup1");
+					}
+				});
+				$(".popup2").popup({
+					transparentLayer : true,
+					gallery : false,
+					popupID : "popupBox2",
+					ajax : true,
+					overflow: "hidden",
+					shadowLength : 10,
+					hasCloseButton : false,
+					onOpen : function() {
+						console.log("opened the box .popup2");
+					},
+					onClose : function() {
+						console.log("closed the box .popup2");
+					}
+				});
+				$(".popup3").popup({
+					transparentLayer : true,
+					gallery : false,
+					popupID : "popupBox3",
+					contentClass : "popupBox3",
+					onOpen : function() {
+						console.log("opened the box .popup3");
+					},
+					onClose : function() {
+						console.log("closed the box .popup3");
+					}
+				});
+
+			});
+			
+
+    </script>
 </head>
 
 <body>
-<div class="container">
-	<div class="row">
-		<div class='list-group gallery'>
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/band.jpg">
-                    <img class="img-responsive" alt="" src="image/band.jpg" />
+    <center>
+        <h1>Photo Gallery</h1>
+        <h2> A Beautiful Responsive grid for your favourite photos</h2>
+    </center>
+    <div class="container">
+        <div class="row">
+            <div class='list-group gallery'>
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                     
+                        <img class="img-responsive" alt="" src="image/band.jpg" name="image/band.jpg" class="popup" title="Band"/>
                     <div class='text-right'>
-                        <small class='text-muted'>Band</small>
-                        <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                      <small class='text-muted' >Band</small>
+
+
+
+                       <div id="demo">
+                           <script>
+                            var dislike1 = 0;
+                            var like1 = 0;
+                            function add1() {
+                                like1 += 1;
+                                document.getElementById("likes1").innerHTML = like1;
+                            }
+                            function sub1() {
+                                dislike1 += 1;
+                                document.getElementById("dislikes1").innerHTML = dislike1;
+                            }
+                        </script>
+                            
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/city.jpg">
-                    <img class="img-responsive" alt="" src="image/city.jpg" />
+                     
+                        <button class="btn like btn-danger" onclick="add1()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes1">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub1()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes1">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                  
+                    <img class="img-responsive" alt="" src="image/city.jpg" name="image/city.jpg" class="popup" title="City"/>
                     <div class='text-right'>
-                        <small class='text-muted'>City</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >City</small>
+                       <div id="demo">
+                           <script>
+                                var dislike2 = 0;
+                                var like2 = 0;
+                                function add2() {
+                                    like2 += 1;
+                                    document.getElementById("likes2").innerHTML = like2;
+                                }
+                                function sub2() {
+                                    dislike2 += 1;
+                                    document.getElementById("dislikes2").innerHTML = dislike2;
+                                }
+                        </script>
+                            
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/couple.jpg">
-                    <img class="img-responsive" alt="" src="image/couple.jpg" />
+                     </a>
+                        <button class="btn like btn-danger" onclick="add2()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes2">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub2()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes2">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                       
+                    <img class="img-responsive" alt="" src="image/couple.jpg" name="image/couple.jpg" class="popup" title="Couple" />
                     <div class='text-right'>
-                        <small class='text-muted'>Couple</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Couple</small>
+                       <div id="demo">
+                           <script>
+                                var dislike3 = 0;
+                                var like3 = 0;
+                                function add3() {
+                                    like3 += 1;
+                                    document.getElementById("likes3").innerHTML = like3;
+                                }
+                                function sub3() {
+                                    dislike3 += 1;
+                                    document.getElementById("dislikes3").innerHTML = dislike3;
+                                }
+                        </script>
+                           
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/deer.jpg">
-                    <img class="img-responsive" alt="" src="image/deer.jpg" />
+                     
+                        <button class="btn like btn-danger" onclick="add3()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes3">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub3()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes3">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                      
+                    <img class="img-responsive" alt="" src="image/deer.jpg" name="image/deer.jpg" class="popup" title="Deer"/>
                     <div class='text-right'>
-                        <small class='text-muted'>Deer</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Deer</small>
+                       <div id="demo">
+                           <script>
+                                var dislike4 = 0;
+                                var like4 = 0;
+                                function add4() {
+                                    like4 += 1;
+                                    document.getElementById("likes4").innerHTML = like4;
+                                }
+                                function sub4() {
+                                    dislike4 += 1;
+                                    document.getElementById("dislikes4").innerHTML = dislike4;
+                                }
+                        </script>
+                           
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/elephant.jpeg">
-                    <img class="img-responsive" alt="" src="image/elephant.jpeg" />
+                    
+                        <button class="btn like btn-danger" onclick="add4()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes4">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub4()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes4">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                     
+                    <img class="img-responsive" alt="" src="image/elephant.jpeg" name="image/elephant.jpeg" class="popup" title="Elephant"/>
                     <div class='text-right'>
-                        <small class='text-muted'>Elephant</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Elephant</small>
+                       <div id="demo">
+                           <script>
+                                var dislike5 = 0;
+                                var like5 = 0;
+                                function add5() {
+                                    like5 += 1;
+                                    document.getElementById("likes5").innerHTML = like5;
+                                }
+                                function sub5() {
+                                    dislike5 += 1;
+                                    document.getElementById("dislikes5").innerHTML = dislike5;
+                                }
+                        </script>
+                            
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/fox.jpeg">
-                    <img class="img-responsive" alt="" src="image/fox.jpeg" />
+                    
+                        <button class="btn like btn-danger" onclick="add5()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes5">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub5()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes5">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                      
+                    <img class="img-responsive" alt="" src="image/fox.jpeg" name="image/fox.jpeg" class="popup" title="Fox"/>
                     <div class='text-right'>
-                        <small class='text-muted'>Fox</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Fox</small>
+                       <div id="demo">
+                           <script>
+                                var dislike6 = 0;
+                                var like6 = 0;
+                                function add6() {
+                                    like6 += 1;
+                                    document.getElementById("likes6").innerHTML = like6;
+                                }
+                                function sub6() {
+                                    dislike6 += 1;
+                                    document.getElementById("dislikes6").innerHTML = dislike6;
+                                }
+                        </script>
+                        
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/moon.jpg">
-                    <img class="img-responsive" alt="" src="image/moon.jpg" />
+                  
+                        <button class="btn like btn-danger" onclick="add6()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes6">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub6()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes6">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                       
+                    <img class="img-responsive" alt="" src="image/moon.jpg" name="image/moon.jpg" class="popup" title="Moon"/>
                     <div class='text-right'>
-                        <small class='text-muted'>Moon</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Moon</small>
+                       <div id="demo">
+                           <script>
+                                var dislike7 = 0;
+                                var like7 = 0;
+                                function add7() {
+                                    like7 += 1;
+                                    document.getElementById("likes7").innerHTML = like7;
+                                }
+                                function sub7() {
+                                    dislike7 += 1;
+                                    document.getElementById("dislikes7").innerHTML = dislike7;
+                                }
+                        </script>
+                           
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/mountain-sky.jpeg">
-                    <img class="img-responsive" alt="" src="image/mountain-sky.jpeg" />
+                     
+                        <button class="btn like btn-danger" onclick="add7()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes7">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub7()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes7">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                       
+                    <img class="img-responsive" alt="" src="image/mountain-sky.jpeg" name="image/mountain-sky.jpeg" class="popup" title="Mountain-Sky"/>
                     <div class='text-right'>
-                        <small class='text-muted'>Mountion-Sky</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Mountain-Sky</small>
+                       <div id="demo">
+                           <script>
+                                var dislike8 = 0;
+                                var like8 = 0;
+                                function add8() {
+                                    like8 += 1;
+                                    document.getElementById("likes8").innerHTML = like8;
+                                }
+                                function sub8() {
+                                    dislike8 += 1;
+                                    document.getElementById("dislikes8").innerHTML = dislike8;
+                                }
+                        </script>
+                           
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/national-park.jpeg">
-                    <img class="img-responsive" alt="" src="image/national-park.jpeg" />
+                    
+                        <button class="btn like btn-danger" onclick="add8()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes8">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub8()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes8">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                      
+                    <img  alt="" src="image/national-park.jpeg" name="image/national-park.jpeg" class="popup" title="National-Park"/>
                     <div class='text-right'>
-                        <small class='text-muted'>National-Park</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >National-Park</small>
+                       <div id="demo">
+                           <script>
+                                var dislike9 = 0;
+                                var like9 = 0;
+                                function add9() {
+                                    like9 += 1;
+                                    document.getElementById("likes9").innerHTML = like9;
+                                }
+                                function sub9() {
+                                    dislike9 += 1;
+                                    document.getElementById("dislikes9").innerHTML = dislike9;
+                                }
+                        </script>
+                          
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/ocean-cave.jpg">
-                    <img class="img-responsive" alt="" src="image/ocean-cave.jpg" />
+                     
+                        <button class="btn like btn-danger" onclick="add9()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes9">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub9()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes9">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                        
+                    <img  alt="" src="image/ocean-cave.jpg"  name="image/ocean-cave.jpg" class="popup" title="Ocean-Cave"/>
                     <div class='text-right'>
-                        <small class='text-muted'>Ocean-Cave</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Ocean-Cave</small>
+                       <div id="demo">
+                           <script>
+                                var dislike10 = 0;
+                                var like10 = 0;
+                                function add10() {
+                                    like10 += 1;
+                                    document.getElementById("likes10").innerHTML = like10;
+                                }
+                                function sub10() {
+                                    dislike10 += 1;
+                                    document.getElementById("dislikes10").innerHTML = dislike10;
+                                }
+                        </script>
+                           
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/pancakes.gif">
-                    <img class="img-responsive" alt="" src="image/pancakes.gif" />
+                    
+                        <button class="btn like btn-danger" onclick="add10()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes10">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub10()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes10">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                        
+                    <img  alt="" src="image/pancakes.gif" name="image/pancakes.gif" class="popup" title="Pancakes" />
                     <div class='text-right'>
-                        <small class='text-muted'>Pancakes</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Pancakes</small>
+                       <div id="demo">
+                           <script>
+                                var dislike11 = 0;
+                                var like11 = 0;
+                                function add11() {
+                                    like11 += 1;
+                                    document.getElementById("likes11").innerHTML = like11;
+                                }
+                                function sub11() {
+                                    dislike11 += 1;
+                                    document.getElementById("dislikes11").innerHTML = dislike11;
+                                }
+                        </script>
+                            
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="image/sunset.jpg">
-                    <img class="img-responsive" alt="" src="image/sunset.jpg" />
+                     
+                        <button class="btn like btn-danger" onclick="add11()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes11">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub11()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes11">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+                <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
+                    <div class="thumbnail fancybox" align="right">
+                       
+                    <img  alt="" src="image/sunset.jpg" name="image/sunset.jpg" class="popup" title="Sunset" />
                     <div class='text-right'>
-                        <small class='text-muted'>Sunset</small>
-                          <div id="demo">
-    <button class="btn like btn-danger"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes">0</span></button>
-    <button class="btn dislike btn-warning"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes">0</span></button>
-  </div>
+                        <small class='text-muted' >Sunset</small>
+                       <div id="demo">
+                           <script>
+                                var dislike12 = 0;
+                                var like12 = 0;
+                                function add12() {
+                                    like12 += 1;
+                                    document.getElementById("likes12").innerHTML = like12;
+                                }
+                                function sub12() {
+                                    dislike12 += 1;
+                                    document.getElementById("dislikes12").innerHTML = dislike12;
+                                }
+                        </script>
+                            
+                        </div>
                     </div> <!-- text-right / end -->
-                </a>
-            </div> <!-- col-6 / end -->
-        </div> <!-- list-group / end -->
-	</div> <!-- row / end -->
-</div> <!-- container / end -->
+                    
+                        <button class="btn like btn-danger" onclick="add12()"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Like <span class="likes" id="likes12">0</span></button>
+                        <button class="btn dislike btn-warning" onclick="sub12()"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Dislike <span class="dislikes" id="dislikes12">0</span></button>
+                    </div>
+                </div>
+                <!-- col-6 / end -->
+
+
+ 
+
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
