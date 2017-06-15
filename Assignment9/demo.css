@@ -1,5 +1,6 @@
 /* line 1, ../sass/demo.scss */
 html, body {
+
   font-family: 'Slabo 27px', serif;
   padding: 0;
   margin: 0;
@@ -10,7 +11,23 @@ html, body {
 * {
   box-sizing: border-box;
 }
+body {
 
+  background-image: url(image/bg.png);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color:#464646;
+  }
+
+
+@media only screen and (max-width: 767px) {
+  body {
+
+    background-image: url(images/bg.png);
+  }
+	}
 /* line 12, ../sass/demo.scss */
 a {
   color: #4ab19a;
@@ -56,7 +73,7 @@ a {
 }
 /* line 57, ../sass/demo.scss */
 .container .gallery a.big img {
-  width: 100%;
+  width: 300%;
 }
 
 /* line 65, ../sass/demo.scss */
