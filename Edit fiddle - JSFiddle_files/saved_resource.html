@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://fiddle.jshell.net/_display/ -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="./jquery.min.js"></script>
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+  
+
+  
+    
+      <script type="text/javascript" src="./modernizr-2.0.6-development-only.js"></script>
+    
+  
+
+  <style type="text/css">
+    .box2 {
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+    
+    	background:red;
+}
+  </style>
+
+  <title></title>
+
+  
+    
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+    var el = ".box2";
+
+    //Modernizr.csstransitions = false;
+
+    if (Modernizr.csstransitions) {
+      $(el).css({
+        "transition": "all 500ms ease-in-out"
+      });
+    }
+
+    var rot = 0;
+
+    $(el).click(function(){
+      if (rot===0) {
+        rot = 180;
+      } else {
+        rot = 0;
+      }
+      if (Modernizr.csstransitions) {
+        $(el).css({"transform": "rotate("+rot+"deg)"});
+      } else {
+        $(el).stop().animate(
+          {rotation: rot},
+          {
+            duration: 500,
+            step: function(now, fx) {
+              $(this).css({"transform": "rotate("+now+"deg)"});
+            }
+          }
+        );
+      }
+    });
+});//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  
+<div class="style-box">
+				<p>
+					Make this box spin by adding the spin class
+				</p>
+
+				<div class="box2" style="transition: all 500ms ease-in-out; transform: rotate(0deg);">
+				</div>
+			</div>
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "None"
+    }], "*")
+  }
+</script>
+
+
+
+
+
+</body></html>
