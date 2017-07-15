@@ -15,7 +15,7 @@ exports.start = start;
 exports.upload = upload;*/
 
 ////////  Sample 2
-/*
+
 var exec = require("child_process").exec; 
 function start(response) {
   console.log("Request handler 'start' was called.");
@@ -32,7 +32,7 @@ response.end();
 exports.start = start;
 exports.upload = upload;
 
-*/
+
 
 //////  Sample 3
 /*
@@ -61,7 +61,7 @@ response.end();
 exports.start = start;
 exports.upload = upload;
 */
-
+/*
 /////////  Sample 4
 var querystring = require("querystring"), fs = require("fs"),
 formidable = require("formidable");
@@ -87,8 +87,7 @@ function upload(response, request) {
 var form = new formidable.IncomingForm(); console.log("about to parse");
 form.parse(request, function(error, fields, files) {
     console.log("parsing done");
-    /* Possible error on Windows systems:
-       tried to rename to an already existing file */
+    
 fs.rename(files.upload.path, "/tmp/test.png", function(err) { if (err) {
         fs.unlink("/tmp/test.png");
         fs.rename(files.upload.path, "/tmp/test.png");
@@ -113,3 +112,4 @@ response.end();
 exports.start = start;
 exports.upload = upload;
 exports.show = show;
+*/
